@@ -1,7 +1,7 @@
 
 
 
-
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
 .footer{
     position: fixed;
@@ -18,5 +18,8 @@
 <div class="footer-container">
     <div class="footer center">
         Footer
+    </div>
+    <div class="w3-display-bottomleft">
+        <a href="about.php" class="w3-btn">About</a>
     </div>
 </div>

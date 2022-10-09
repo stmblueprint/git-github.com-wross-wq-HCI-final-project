@@ -28,34 +28,25 @@
 
     // TEMPORARY NAVIGATION
     require_once "temp-file-navigation.php";
+   
    ?>
 
-    <!--most popular section-->
-    <div class="w3-container w3-center">
-    
-    <h3>Most Popular</h3>
 
-    <div style="overflow-y: scroll; height:400px;">
-    
-    </div>
+<div class="w3-center w3-container">
+        <h3>GameBoy</h3>
+        <div style="overflow-y: scroll; height:400px;">
 
-    </div>
-    <br>
-    <br>
-    <br>
-    <br>
+        </div>
 
+        <h3>Nintendo DS</h3>
+        <div style="overflow-y: scroll; height:400px;">
+            
+        </div>
 
-
-    <!-- featured items section -->
-    <div class="w3-container w3-center">
-    
-    <h3>Featured Items</h3>
-
-    <div style="overflow-y: scroll; height:400px;">
-    
-    </div>
-
+        <h3>Nintendo 64</h3>
+        <div style="overflow-y: scroll; height:400px;">
+            
+        </div>
     </div>
 
 
