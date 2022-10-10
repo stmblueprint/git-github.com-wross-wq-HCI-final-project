@@ -40,7 +40,9 @@
 .dropdown:hover .dropdown-content {
   display: block;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto;
+  justify-content: left;
+  translate: -100px;
 }
 
 .dropdown:hover .dropbtn {
@@ -54,7 +56,7 @@
     translate: -2px 10px ;
 }
 .table-row-gap{
-    padding-right: 20px;
+    padding-right: 5px;
 }
 th{
   font-size: 14px;
@@ -76,7 +78,7 @@ th{
 </div>
 <script>
   document.getElementById('to-catalog').addEventListener('click', function(){
-    window.top.location = 'catalog.php';
+    window.top.location = 'catalog.php'
   });
 </script>
 

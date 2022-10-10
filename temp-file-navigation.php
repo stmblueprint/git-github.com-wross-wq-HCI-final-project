@@ -15,7 +15,9 @@ button{
   background-color: white;
 }
 .temp-container{
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
   justify-content: center;
 }
 </style>
