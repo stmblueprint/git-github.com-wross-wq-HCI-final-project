@@ -10,15 +10,31 @@
     <title></title>
 </head>
 <style>
-    html,body{
+   
+    body,html{
+        overflow-x: hidden;
         scroll-behavior: smooth;
         /* overflow-x: hidden; */
         margin-top: 1px;
+        position: relative;
+        margin: 0%;
         
     }
+    .catalog-row-position{
+        position: relative;
+    }
+    .indicator-position{
+        position: absolute;
+        z-index: 1;
+        right: 0%;
+        translate: 20px 50px;
+       
+    }
+
 </style>
 
 <body>
+    <div>
    <?php
     // HEADER    
     require_once "header.php";
@@ -30,45 +46,16 @@
     require_once "temp-file-navigation.php";
    ?>
 
-    <!--most popular section-->
-    <div class="w3-container w3-center">
-    
-    <h3>Most Popular</h3>
-
-    <div style="overflow-y: scroll; height:400px;">
-    
-    </div>
-
-    </div>
-    <br>
-    <br>
-    <br>
-    <br>
-
-
-
-    <!-- featured items section -->
-    <div class="w3-container w3-center">
-    
-    <h3>Featured Items</h3>
-
-    <div style="overflow-y: scroll; height:400px;">
-    
-    </div>
-
-    </div>
-
-
-
-
-
-
-
-
 
     <?php 
-    // FOOTER
-     require_once "footer.php"
+      require_once "homepage-content.php";
     ?>
+
+
+
+<div style="padding-top: 100px;">
+   <?php require_once 'footer.php'; ?>
+</div>
+</div>
 </body>
 </html>

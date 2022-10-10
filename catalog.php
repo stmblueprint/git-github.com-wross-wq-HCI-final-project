@@ -10,15 +10,19 @@
     <title></title>
 </head>
 <style>
-    html,body{
+    body{
         scroll-behavior: smooth;
         /* overflow-x: hidden; */
-        margin-top: 1px;
-        
+        margin: 0%;
+        position: relative;
     }
+   
 </style>
 
 <body>
+
+
+    <div>
    <?php
     // HEADER    
     require_once "header.php";
@@ -31,24 +35,13 @@
    
    ?>
 
-    <div class="w3-center w3-container">
-        <h3>Sony</h3>
-        <div style="overflow-y: scroll; height:400px;">
+<div class="catalog-row-container">
+        <?php 
+        require_once 'catalog-rows.php';
+        ?>
+</div>
 
-        </div>
-        
-
-        <h3>Microsoft</h3>
-        <div style="overflow-y: scroll; height:400px;">
-            
-        </div>
-        
-
-        <h3>Nintendo</h3>
-        <div style="overflow-y: scroll; height:400px;">
-            
-        </div>
-    </div>
+   
 
 
 
@@ -57,9 +50,9 @@
 
 
 
-    <?php 
-    // FOOTER
-     require_once "footer.php"
-    ?>
+
+<div style="padding-top: 100px;">
+    <?php require_once 'footer.php'; ?>
+</div>
 </body>
 </html>

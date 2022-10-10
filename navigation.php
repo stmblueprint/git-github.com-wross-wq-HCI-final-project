@@ -40,12 +40,15 @@
 .dropdown:hover .dropdown-content {
   display: block;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto;
+  justify-content: left;
+  translate: -100px;
 }
 
 .dropdown:hover .dropbtn {
-  background-color: turquoise;
+  background-color: #73C7E9;
   border-radius: 12px;
+  color: white;
 }
 
 .nav-arrow-btn{
@@ -53,12 +56,32 @@
     translate: -2px 10px ;
 }
 .table-row-gap{
-    padding-right: 20px;
+    padding-right: 5px;
+}
+th{
+  font-size: 14px;
+}
+#to-catalog:hover{
+  cursor: pointer;
 }
 
 </style>
 
 <div class="center">
+
+<!-- All our retro games on one page -->
+<div class="dropdown" id="to-catalog">
+  <div class="dropbtn">Retro Catalog 
+    <img class="nav-arrow-btn" src="assets/nav-arrow.png" height="20" width="20"></div>
+  <div class="dropdown-content">
+  </div>
+</div>
+<script>
+  document.getElementById('to-catalog').addEventListener('click', function(){
+    window.top.location = 'catalog.php'
+  });
+</script>
+
 
  <!-- SONY LIST -->
 <div class="dropdown">
