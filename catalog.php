@@ -9,15 +9,19 @@
     <title></title>
 </head>
 <style>
-    html,body{
+    body{
         scroll-behavior: smooth;
         /* overflow-x: hidden; */
-        margin-top: 1px;
-        
+        margin: 0%;
+        position: relative;
     }
+   
 </style>
 
 <body>
+
+
+    <div>
    <?php
     // HEADER    
     require_once "header.php";
@@ -30,6 +34,13 @@
    
    ?>
 
+<div class="catalog-row-container">
+        <?php 
+        require_once 'catalog-rows.php';
+        ?>
+</div>
+
+   
 
 
 
@@ -38,10 +49,8 @@
 
 
 
-
-    <?php 
-    // FOOTER
-     require_once "footer.php"
-    ?>
+<div style="padding-top: 100px;">
+    <?php require_once 'footer.php'; ?>
+</div>
 </body>
 </html>

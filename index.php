@@ -9,15 +9,31 @@
     <title></title>
 </head>
 <style>
-    html,body{
+   
+    body,html{
+        overflow-x: hidden;
         scroll-behavior: smooth;
         /* overflow-x: hidden; */
         margin-top: 1px;
+        position: relative;
+        margin: 0%;
         
     }
+    .catalog-row-position{
+        position: relative;
+    }
+    .indicator-position{
+        position: absolute;
+        z-index: 1;
+        right: 0%;
+        translate: 20px 50px;
+       
+    }
+
 </style>
 
 <body>
+    <div>
    <?php
     // HEADER    
     require_once "header.php";
@@ -30,18 +46,21 @@
    
    ?>
 
-
-
-
-
-
-
-
-
+   <div>
+        <?php
+         require_once "slideshow.php";
+        ?>
+   </div>
 
     <?php 
-    // FOOTER
-     require_once "footer.php"
+      require_once "homepage-content.php";
     ?>
+
+
+
+<div style="padding-top: 100px;">
+   <?php require_once 'footer.php'; ?>
+</div>
+</div>
 </body>
 </html>
