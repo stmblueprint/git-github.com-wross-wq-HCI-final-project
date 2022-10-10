@@ -10,31 +10,15 @@
     <title></title>
 </head>
 <style>
-   
-    body,html{
-        overflow-x: hidden;
+    html,body{
         scroll-behavior: smooth;
         /* overflow-x: hidden; */
         margin-top: 1px;
-        position: relative;
-        margin: 0%;
         
     }
-    .catalog-row-position{
-        position: relative;
-    }
-    .indicator-position{
-        position: absolute;
-        z-index: 1;
-        right: 0%;
-        translate: 20px 50px;
-       
-    }
-
 </style>
 
 <body>
-    <div>
    <?php
     // HEADER    
     require_once "header.php";
@@ -44,18 +28,38 @@
 
     // TEMPORARY NAVIGATION
     require_once "temp-file-navigation.php";
+   
    ?>
 
 
+<div class="w3-center w3-container">
+        <h3>GameBoy</h3>
+        <div style="overflow-y: scroll; height:400px;">
+
+        </div>
+
+        <h3>Nintendo DS</h3>
+        <div style="overflow-y: scroll; height:400px;">
+            
+        </div>
+
+        <h3>Nintendo 64</h3>
+        <div style="overflow-y: scroll; height:400px;">
+            
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
     <?php 
-      require_once "homepage-content.php";
+    // FOOTER
+     require_once "footer.php"
     ?>
-
-
-
-<div style="padding-top: 100px;">
-   <?php require_once 'footer.php'; ?>
-</div>
-</div>
 </body>
 </html>

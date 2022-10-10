@@ -83,9 +83,11 @@ th{
 
  <!-- SONY LIST -->
 <div class="dropdown">
+  <a href="sony-catalog.php">
   <div class="dropbtn">Sony 
     <img class="nav-arrow-btn" src="assets/nav-arrow.png" height="20" width="20"></div>
   <div class="dropdown-content">
+  </a>
     
    <table class="center">
     <tr>
@@ -112,10 +114,7 @@ th{
     <tr>
         <td>Game Title</td>
     </tr>
-   </table>
-   
-   
-
+   </table>   
 
   </div>
 </div>
@@ -123,9 +122,11 @@ th{
   
  <!-- MICROSOFT LIST -->
  <div class="dropdown">
+  <a href="microsoft-catalog.php">
   <div class="dropbtn">Microsoft 
     <img class="nav-arrow-btn" src="assets/nav-arrow.png" height="20" width="20"></div>
   <div class="dropdown-content">
+  </a>
     
    <table class="center">
     <tr>
@@ -156,11 +157,14 @@ th{
   </div>
  </div>
 
+
  <!-- NINTENDO LIST -->
  <div class="dropdown">
+  <a href="nintendo-catalog.php">
   <div class="dropbtn">Nintendo 
     <img class="nav-arrow-btn" src="assets/nav-arrow.png" height="20" width="20"></div>
   <div class="dropdown-content">
+  </a>
     
    <table class="center">
     <tr>
