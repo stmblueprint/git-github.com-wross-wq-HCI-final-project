@@ -2,19 +2,19 @@ Retro Gaming E-commerce 🎮
 
 
 
-##Services
+## Services
 -AWS Lightsail, LAMP
 
-##Database
+## Database
 -MySQL
 
-##Languages
+## Languages
 -PHP
 -Javascript
 
-##Resources
+## Resources
 -fontawesome
 -W3 schools
 
-##Other
+## Other
 -HTML, CSS
