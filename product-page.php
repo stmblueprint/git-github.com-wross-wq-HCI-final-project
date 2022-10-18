@@ -38,6 +38,7 @@
     .addtocart-button:hover{
         filter: brightness(1.1);
         box-shadow: 10px 10px 20px lightgray;
+        scale: 1.1;
 
     }
     .fa-solid, .fa-cart-shopping{
@@ -61,7 +62,26 @@
         display: grid;
         grid-template-columns: auto;
     }
-    
+    .btn-price-grid{
+      display: grid;
+      grid-template-columns: auto auto;
+    }
+    .price-border{
+      background-color: lightblue;
+      border-radius: 100px;
+      box-shadow: 5px 5px 15px lightgray;
+      filter: brightness(1.1);
+      padding-left: 6px;
+
+    }
+    .price-border:hover{
+      background-color: #73C7E9;
+      border-radius: 100px;
+      padding: 10px;
+      box-shadow: 5px 5px 15px lightgray;
+
+    }
+   
 </style>
 <body>  
 
@@ -79,12 +99,29 @@
    ?>
 
 <!-- add to cart button -->
+<div class="btn-price-grid">
+<a href="cart.php">
    <div class="addtocart-container">
       <div class="addtocart-button">
         <span style="padding: 10px;"> ADD TO CART </span>
             <i class="fa-solid fa-cart-shopping"></i>
       </div>
    </div>
+   </a>
+<!-- price display -->
+   <div class="price-container center">
+    <div class="price-border">
+      <div class="price-content">
+        $49.99 <i class="fa-sharp fa-solid fa-tag"></i>
+      </div>
+    </div>
+   </div>
+</div>
+
+<!-- toggle rent or buy -->
+<div style="margin:20px;" class="center">
+   <?php require_once "components/rent-or-buy.php";?>
+</div>
 
 <!-- page content -->
 <div class="page-product-container">
@@ -117,8 +154,8 @@
 
 
 
-<div>
-    <?php require_once 'footer.php'; ?>
+<div style="padding-top: 100px;">
+   <?php require_once 'footer.php'; ?>
 </div>
 </div>
 </body>

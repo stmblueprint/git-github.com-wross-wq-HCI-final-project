@@ -253,11 +253,10 @@
         </section>
 
 
-        <!-- footer -->
-        <div class="footer-settings-container">
-            <div class="footer-settings">
-            </div>
-        </div>
+       <?php
+        // FOOTER  
+        require_once "footer.php";
+       ?>
     </div>
 </body>
 

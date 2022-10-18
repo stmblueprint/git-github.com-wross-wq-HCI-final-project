@@ -12,9 +12,12 @@
 </head>
 <style>
     html,body{
+        overflow-x: hidden;
         scroll-behavior: smooth;
         /* overflow-x: hidden; */
         margin-top: 1px;
+        position: relative;
+        margin: 0%;
         
     }
 </style>
@@ -50,10 +53,14 @@
     </div>
 
 
+<div>
 
-    <?php 
-    // FOOTER
-     require_once "footer.php"
-    ?>
+</div>
+<div style="padding-top: 100px;">
+        <?php
+            // FOOTER  
+            require_once "footer.php";
+         ?>
+ </div>
 </body>
 </html>
