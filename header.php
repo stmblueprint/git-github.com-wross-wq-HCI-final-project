@@ -89,23 +89,6 @@
         cursor: pointer;
     }
 </style>
-
-    <?php
-
-        $search = '';
-
-        $errors = array('search' => '');
-
-         //check search
-        if(empty($_POST['search']))
-            $errors['search'] = "notfound.php";
-        else {
-            $city = $_POST['search'];
-        if(!preg_match('/^[a-zA-Z\s\.\-]+$/', $city))
-            $errors['search'] = 'can only contain letters and spaces';
-}
-    ?>
-
 <html>
 
 <body>
@@ -149,17 +132,6 @@
                 Logout
             </div>
         </div>
-
-        <!-- search bar -->
-        <div>
-            <form action="header.php" method="POST" >
-                <div class="w3-container">
-                  <input class="w3-input w3-border" type="text" name="search" value="<?php echo $search; ?>">
-                  <input type="submit" name="search" value="submit" class="w3-btn w3-gray" style="float: right" />
-                </div>
-            </form>
-        </div>
-       
 
     </span>
     <script>

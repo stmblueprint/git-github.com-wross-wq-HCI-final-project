@@ -11,7 +11,7 @@
 <style>
     html,body{
         scroll-behavior: smooth;
-        /* overflow-x: hidden; */
+        /*overflow-x: hidden;*/
         margin-top: 1px;
         
     }
@@ -33,17 +33,17 @@
     <div class="w3-center w3-container">
         <h3>Playstation 1</h3>
         <div>
-            <?php require_once '/catalog-content/sony-console-pages/ps1-content.php'; ?>
+            <?php require_once 'catalog-content/sony-console-pages/ps1-content.php'; ?>
         </div>
 
         <h3>Playstation 2</h3>
         <div>
-            <?php require_once '/catalog-content/sony-console-pages/ps2-content.php'; ?>
+            <?php require_once 'catalog-content/sony-console-pages/ps2-content.php'; ?>
         </div>
 
         <h3>Playstation 3</h3>
         <div>
-            <?php require_once '/catalog-content/sony-console-pages/ps3-content.php'; ?>
+            <?php require_once 'catalog-content/sony-console-pages/ps3-content.php'; ?>
         </div>
 
     </div>
