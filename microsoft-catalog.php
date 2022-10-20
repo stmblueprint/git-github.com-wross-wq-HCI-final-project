@@ -1,5 +1,4 @@
 
-<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,12 +11,9 @@
 </head>
 <style>
     html,body{
-        overflow-x: hidden;
         scroll-behavior: smooth;
         /* overflow-x: hidden; */
         margin-top: 1px;
-        position: relative;
-        margin: 0%;
         
     }
 </style>
@@ -37,30 +33,26 @@
 
 <div class="w3-center w3-container">
         <h3>Xbox</h3>
-        <div style="overflow-y: scroll; height:400px;">
-
+        <div>
+        <?php require_once '/Applications/XAMPP/xamppfiles/htdocs/HCI-semester-proj/git-github.com-wross-wq-HCI-final-project-main/catalog-content/microsoft-console-pages/xbox-content.php'; ?>
         </div>
 
         <h3>Xbox 360</h3>
-        <div style="overflow-y: scroll; height:400px;">
-            
+        <div>
+        <?php require_once '/Applications/XAMPP/xamppfiles/htdocs/HCI-semester-proj/git-github.com-wross-wq-HCI-final-project-main/catalog-content/microsoft-console-pages/xbox-360-content.php'; ?>
         </div>
 
         <h3>Xbox one</h3>
-        <div style="overflow-y: scroll; height:400px;">
-            
+        <div>
+        <?php require_once '/Applications/XAMPP/xamppfiles/htdocs/HCI-semester-proj/git-github.com-wross-wq-HCI-final-project-main/catalog-content/microsoft-console-pages/xbox-one-content.php'; ?>
         </div>
     </div>
 
 
-<div>
 
-</div>
-<div style="padding-top: 100px;">
-        <?php
-            // FOOTER  
-            require_once "footer.php";
-         ?>
- </div>
+    <?php 
+    // FOOTER
+     require_once "footer.php"
+    ?>
 </body>
 </html>

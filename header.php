@@ -1,10 +1,12 @@
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-   
+    @media only screen and (min-width: 360px) {}
+
     .center {
         display: flex;
         align-items: center;
@@ -12,11 +14,8 @@
     }
 
     .header-grid {
-            display: grid;
-            justify-content: left;
-            grid-template-columns: auto auto auto auto;
-            gap: 200px;
-            padding: 10px;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
 
     }
 
@@ -51,6 +50,7 @@
 
     .username-display {
         color: brown;
+        ;
     }
 
     /* Hide scrollbar for Chrome, Safari and Opera */
@@ -83,59 +83,32 @@
         translate: 15px;
         opacity: 0.75;
 
+    }
 
-    }
-    .icon-label:hover{
-       border-radius: 12px;
-       background-color: #73C7E9;
-       box-shadow: 5px 5px 10px black;
-       padding: 10px;
-       scale: 1.2;
-    }
-    .icon-label:active{
-        animation: 1s alternate radial-fade;
-    }
-    @keyframes radial-fade {
-        0%{
-            scale: 1.25;
-            opacity: 1;
-        }
-        25%{
-            scale: 1.4;
-            opacity: 0.75;
-        }
-        75%{
-            scale: 1.6;
-            opacity: 0.25;
-        }
-        100%{
-            scale: 1.8;
-            opacity: 0;
-        }
-    }
     i:hover {
         cursor: pointer;
     }
-
-    @media only screen and (min-width: 340px) and (max-width: 900px){
-
-        .header-grid {
-            display: grid;
-            justify-content: center;
-            gap: 5px;
-            grid-template-columns: auto auto auto auto;
-
-        }
-
-    }
-
 </style>
+
+    <?php
+
+        $search = '';
+
+        $errors = array('search' => '');
+
+         //check search
+        if(empty($_POST['search']))
+            $errors['search'] = "notfound.php";
+        else {
+            $city = $_POST['search'];
+        if(!preg_match('/^[a-zA-Z\s\.\-]+$/', $city))
+            $errors['search'] = 'can only contain letters and spaces';
+}
+    ?>
 
 <html>
 
 <body>
-
-
 
     <span class="center header-grid">
         <div class="logo-container">
@@ -143,18 +116,7 @@
                 <div class="logo center" style='font-size: 10px;'>Retro Gaming</div>
             </a>
             <br />
-            <span class="username-display">Hello,&nbsp; <?php
-            
-            if( $_SESSION['username'] === null){
-                $_SESSION['username'] = "Guest";
-            } else{
-                $_SESSION['username'] = $_SESSION['username'];
-            }
-            
-
-             echo $_SESSION['username'];
-            
-            ?></span>
+            <span class="username-display">Hello,&nbsp; <?= $_SESSION['username']; ?></span>
         </div>
 
         <!-- cart icon -->
@@ -163,7 +125,7 @@
                 <i class="fa-solid fa-cart-shopping"></i>
             </a>
 
-            <div class="icon-label-style" style="translate: 15px -12px;">
+            <div class="icon-label-style" style="translate: 15px;">
                 Cart
             </div>
         </div>
@@ -173,8 +135,8 @@
             <a href="registration.php">
                 <i class="fa-solid fa-user-astronaut"></i>
 
-                <div class="icon-label-style" style="translate: -0.5px -12px;">
-                    Account
+                <div class="icon-label-style">
+                    Profile
                 </div>
             </a>
         </div>
@@ -183,10 +145,21 @@
         <div class="icon-label center">
             <i id="sign-out-button" class="fa-sharp fa-solid fa-arrow-right-from-bracket"></i>
 
-            <div class="icon-label-style" style="translate: 0px -12px;">
-                Sign out
+            <div class="icon-label-style">
+                Logout
             </div>
         </div>
+
+        <!-- search bar -->
+        <div>
+            <form action="header.php" method="POST" >
+                <div class="w3-container">
+                  <input class="w3-input w3-border" type="text" name="search" value="<?php echo $search; ?>">
+                  <input type="submit" name="search" value="submit" class="w3-btn w3-gray" style="float: right" />
+                </div>
+            </form>
+        </div>
+       
 
     </span>
     <script>
@@ -200,11 +173,12 @@
     </script>
     <?php 
         $uri = $_SERVER['REQUEST_URI'];
-        if ($uri == '/registration.php?logout=true' and $_SESSION['username'] !== null and $_SESSION['username'] !== "Guest") {
+        if ($uri == '/registration.php?logout=true' and $_SESSION['username'] !== null) {
             session_unset();
             session_destroy();
 
             echo "<script> window.top.location = 'logoutsplash.php' </script>";
+
         } 
     ?> 
 
