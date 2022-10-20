@@ -138,11 +138,13 @@
     // TODO: fetch encryted password
 
     // fetch user information database
+   
     function fetchUser($conn, $email, $password)
     {
         $checkForUser = "SELECT * FROM Customers WHERE email='" . $email . "' AND password='" . $password . "';";
         $result = My_SQL_EXE($conn, $checkForUser);
         $row = mysqli_fetch_array($result);
+
 
         if ($row[1] <> null and $row[3] <> null) {
             $_SESSION['username'] = $row[2];
@@ -221,11 +223,10 @@
         </div>
     </section>
 
-    <!-- footer -->
-    <div class="footer-settings-container">
-        <div class="footer-settings">
-        </div>
-    </div>
+    <?php
+        // FOOTER  
+        require_once "footer.php";
+    ?>
 </body>
 
 </html>

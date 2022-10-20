@@ -48,11 +48,6 @@ button{
 </div>
 
 <div class="nav-button-container">
-    <a href="billing.php">
-      <button> Billing</button>
-    </a>
-</div>
-<div class="nav-button-container">
     <a href="checkout.php">
       <button> Checkout</button>
     </a>
