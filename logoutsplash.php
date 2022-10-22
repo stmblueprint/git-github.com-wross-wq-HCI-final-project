@@ -49,7 +49,7 @@
 <div class="splash">
     <img src="https://cdn.dribbble.com/users/3337757/screenshots/6825268/076_-loading_animated_dribbble_copy.gif" alt="" height="400">
     <div class="feedback-words">
-       <h1 ><?= ucfirst($_SESSION['username']).", Signing out...";?></h1>
+       <h1>Signing out...</h1>
     </div>
 </div>
 
@@ -59,7 +59,8 @@
   document.addEventListener('DOMContentLoaded', (e) =>{
     setTimeout(() =>{
         splash.classList.add('display-none')
-        window.top.location='index.php'
+            window.top.location='index.php'
+
 
     }, 8000);
   })

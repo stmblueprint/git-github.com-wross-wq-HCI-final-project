@@ -51,10 +51,10 @@
   color: white;
 }
 
-.nav-arrow-btn{
+/* .nav-arrow-btn{
     filter: brightness(0.7);
     translate: -2px 10px ;
-}
+} */
 .table-row-gap{
     padding-right: 5px;
 }
@@ -64,8 +64,22 @@ th{
 #to-catalog:hover{
   cursor: pointer;
 }
-
+.navigation-display{
+  display: none;
+}
+.hamburger-menu-position{
+  position: relative;
+  z-index: 1;
+  margin-bottom: 50px;
+}
 </style>
+
+<div class="hamburger-menu-position">
+  <?php require_once "hamburger-menu.php"?>
+</div>
+
+
+<div class="navigation-display">
 
 <div class="center">
 
@@ -196,4 +210,5 @@ th{
    </table>
   </div>
  </div>
+</div>
 </div>

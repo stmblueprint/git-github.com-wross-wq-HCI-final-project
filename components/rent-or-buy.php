@@ -94,9 +94,6 @@ input:checked + .slider .off
 
 
 </style>
-
-
-
 <div class="switch-container">
     <div style="opacity: 0.5; font-weight: bold;">Tap the switch to select a purchase method</div><br/>
         <div class="switch-border">

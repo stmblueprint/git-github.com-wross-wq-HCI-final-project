@@ -105,7 +105,7 @@
             require "scroll-indicator.php";
         ?>
     </div>
-<div class="row scrollbar-hidden">
+<!-- <div class="row scrollbar-hidden">
 
     <div class="item-containers">
         <div class="promotion-img center" style="margin:10px ;">
@@ -139,8 +139,9 @@
     
         </div>
     </div>
+</div> -->
+<div class="sony-scrolling"><?php require_once "sony-view.php";?></div>
 </div>
-
 
 <!-- MICROSOFT -->
 <div style="margin: 30px; font-size: 20px;" class="center scrollbar-hidden">Microsoft</div>

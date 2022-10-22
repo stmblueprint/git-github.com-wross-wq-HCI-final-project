@@ -55,7 +55,7 @@
     }
     .page-product-container{
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: auto;
         justify-content: center;
     }
     .content-grid{
@@ -81,7 +81,7 @@
       box-shadow: 5px 5px 15px lightgray;
 
     }
-   
+
 </style>
 <body>  
 
@@ -95,7 +95,7 @@
     require_once "navigation.php";
 
     // TEMPORARY NAVIGATION
-    require_once "temp-file-navigation.php";
+    // require_once "temp-file-navigation.php";
    ?>
 
 <!-- add to cart button -->
@@ -112,10 +112,14 @@
    <div class="price-container center">
     <div class="price-border">
       <div class="price-content">
-        $49.99 <i class="fa-sharp fa-solid fa-tag"></i>
+        <?="$".$_GET['price'];?><i class="fa-sharp fa-solid fa-tag"></i>
       </div>
     </div>
    </div>
+</div>
+
+<div class="center">
+  <h4><?= $_GET['title'];?></h4>
 </div>
 
 <!-- toggle rent or buy -->
@@ -139,9 +143,20 @@
    </div>
    
    <!-- video -->
-   <div class="product-container">
-    <div class="content-grid">
-      <div class="video"></div>
+   <?php
+   require_once "private/DB-Functions.php";
+   $conn = My_Connect_DB();
+   ?>
+</div>
+
+<div class="video-container center">
+    <div class="video-content-grid">
+      <div class="video">
+      <iframe width="420" height="345" src="<?php echo $_GET['video'];?>">
+      </iframe>
+      </div>
+
+
       <div class="information">
         <dl>
             <dt>Description: </dt>
@@ -150,7 +165,6 @@
       </div>
     </div>
    </div>
-</div>
 
 
 

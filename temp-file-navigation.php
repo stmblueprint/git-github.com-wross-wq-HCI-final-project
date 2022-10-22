@@ -23,33 +23,55 @@ button{
 </style>
 
 <div class="temp-container">
-<div class="nav-button-container">
+  <ul>
+    <li>
+    <div class="nav-button-container">
     <a href="catalog.php">
       <button> Catalog</button>
     </a>
 </div>
 
-<div class="nav-button-container">
+    </li>
+    <li>
+    <div class="nav-button-container">
     <a href="index.php">
       <button> Homepage</button>
     </a>
-</div>
+    </div>
 
-<div class="nav-button-container">
+
+    </li>
+
+    <li>
+
+    <div class="nav-button-container">
     <a href="product-page.php">
       <button> Product</button>
     </a>
-</div>
+    </div>
+    </li>
 
-<div class="nav-button-container">
+
+    <li>
+    <div class="nav-button-container">
     <a href="cart.php">
       <button> Cart</button>
     </a>
-</div>
+    </div>
 
-<div class="nav-button-container">
+    </li>
+
+
+    <li>
+
+    <div class="nav-button-container">
     <a href="checkout.php">
       <button> Checkout</button>
     </a>
-</div>
+    </div>
+    </li>
+  </ul>
+
+
+
 </div>

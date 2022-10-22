@@ -4,7 +4,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-   
     .center {
         display: flex;
         align-items: center;
@@ -50,7 +49,7 @@
     }
 
     .username-display {
-        color: brown;
+        color: #73C7E9;
     }
 
     /* Hide scrollbar for Chrome, Safari and Opera */
@@ -145,6 +144,7 @@
             <br />
             <span class="username-display">Hello,&nbsp; <?php
             
+            // TODO: check if user exist in database
             if( $_SESSION['username'] === null){
                 $_SESSION['username'] = "Guest";
             } else{
@@ -152,9 +152,10 @@
             }
             
 
-             echo $_SESSION['username'];
+             echo $_SESSION['username']."!!";
+
             
-            ?></span>
+            ?><img style="-webkit-transform: scaleX(-1);" src="https://i.pinimg.com/originals/29/32/63/293263670b8780146ab0c4e40a2ea890.gif" alt="" height="50px"></span>
         </div>
 
         <!-- cart icon -->
