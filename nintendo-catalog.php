@@ -1,5 +1,5 @@
 
-<?php session_start();?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,13 +10,10 @@
     <title></title>
 </head>
 <style>
-     html,body{
-        overflow-x: hidden;
+    html,body{
         scroll-behavior: smooth;
         /* overflow-x: hidden; */
         margin-top: 1px;
-        position: relative;
-        margin: 0%;
         
     }
 </style>
@@ -37,18 +34,18 @@
 
 <div class="w3-center w3-container">
         <h3>GameBoy</h3>
-        <div style="overflow-y: scroll; height:400px;">
-
+        <div>
+            <?php require_once 'catalog-content/nintendo-console-pages/gameboy-content.php'; ?>
         </div>
 
         <h3>Nintendo DS</h3>
-        <div style="overflow-y: scroll; height:400px;">
-            
+        <div>
+            <?php require_once 'catalog-content/nintendo-console-pages/nintendo-64-content.php'; ?>
         </div>
 
         <h3>Nintendo 64</h3>
-        <div style="overflow-y: scroll; height:400px;">
-            
+        <div>
+            <?php require_once 'catalog-content/nintendo-console-pages/nintendo-ds-content.php'; ?>
         </div>
     </div>
 
@@ -60,11 +57,9 @@
 
 
 
-<div style="padding-top: 100px;">
-        <?php
-            // FOOTER  
-            require_once "footer.php";
-         ?>
-</div>
+    <?php 
+    // FOOTER
+     require_once "footer.php"
+    ?>
 </body>
 </html>
