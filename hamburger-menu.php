@@ -25,6 +25,7 @@ li{
     align-items: center;
     padding: 0 24px;
 }
+
 .nav-menu{
     display: flex;
     align-items: center;
@@ -32,9 +33,27 @@ li{
 }
 .nav-link{
     transition: 0.7s ease; 
+    font-weight: 300;
 }
 .nav-link:hover{
     color: white;
+
+}
+
+.nav-link:after{
+    content: '';
+    display: flex;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.nav-link:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 .hamburger{
@@ -49,6 +68,14 @@ li{
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     background-color: black;
+}
+
+@media(min-width: 990px){
+    .menu-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
 }
 
 @media(max-width: 900px){
@@ -112,10 +139,9 @@ li{
 
             <li class="nav-item">
                 <a href="catalog.php" class="nav-link">Retro Catalog</a>
-                <img class="nav-arrow-btn" src="assets/nav-arrow.png" height="20" width="20">
-
+                <!-- <img class="nav-arrow-btn" src="assets/nav-arrow.png" height="20" width="20"> -->
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a href="sony-catalog.php" class="nav-link">Sony</a>
             </li>
             <li class="nav-item">
@@ -123,7 +149,7 @@ li{
             </li>
             <li class="nav-item">
                 <a href="nintendo-catalog.php" class="nav-link">Nintendo</a>
-            </li>
+            </li> -->
             <li class="nav-item">
                 <a href="about.php" class="nav-link">About</a>
             </li>

@@ -1,10 +1,17 @@
 <!-- <!DOCTYPE html> -->
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 
   body{
     margin: 5px;
+  }
+  .img{
+    border-radius: 12px;
+    box-shadow: 4px 4px 16px gray;
+  }
+  .img:hover{
+    scale: 1.1;
   }
 
   .item-img{
@@ -37,6 +44,16 @@
   .row-grid{
     /* display: inline-grid; */
     padding: 30px;
+    /* animation: auto-scroll 300s infinite linear; */
+  }
+  @keyframes auto-scroll {
+    /* from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    } */
+    
   }
 
 .sony-scrolling{
@@ -53,6 +70,34 @@ textarea{
   width: 200px;
   height: 100px;
 }
+button[type=submit]{
+  color: white;
+  background-color: #494646;
+  cursor: pointer;
+  animation: glow infinite linear 3s;
+}
+@keyframes glow {
+  from{
+    color: lightgreen;
+    box-shadow: 2px 2px 12px lightgray;
+  }
+  to{
+    color: green;
+    box-shadow: 4px 4px 15px grey;
+
+  }
+  
+}
+
+button[type=submit]:hover{
+  filter: brightness(1.5);
+}
+
+::placeholder{
+  font-size: 20px;
+  font-weight: bold;
+}
+
 
 
 </style>
@@ -74,6 +119,8 @@ $description = $conn -> real_escape_string($longstr);
 $video = "";  // embed video link
 $image = ""; // image name
 $price = "59.99"; // price
+$console = ""; // console
+
 
 
 
@@ -83,20 +130,20 @@ if (isset($_REQUEST['insertSony']) or isset($_REQUEST['insertMicrosoft']) or iss
   $video = validate_input($_REQUEST['video']);
   $image = validate_input($_REQUEST['image']);
   $price = validate_input($_REQUEST['price']);
-
+  $console = validate_input($_REQUEST['console']);
 
   
 }
 
 // insert Sony
-function insertSony($conn, $title, $description, $video, $image, $price ){
+function insertSony($conn, $title, $description, $video, $image, $price, $console ){
   $sql = "SELECT * FROM Sony WHERE title='".$title."';";
   $result = My_SQL_EXE($conn, $sql);
   $row = mysqli_fetch_row($result);
 
   if($row[1] <> $title){
-    $sql = "INSERT INTO Sony (title, description, video, image, price)
-    VALUES('" . $title . "','" . $description . "','" . $video . "','" . $image . "', '".$price."');";
+    $sql = "INSERT INTO Sony (title, description, video, image, price, console)
+    VALUES('" . $title . "','" . $description . "','" . $video . "','" . $image . "', '".$price."', '".$console."');";
     My_SQL_EXE($conn, $sql);
   }
   else{
@@ -105,14 +152,14 @@ function insertSony($conn, $title, $description, $video, $image, $price ){
 }
 
 // insert Microsoft
-function insertMicrosoft($conn, $title, $description, $video, $image, $price ){
+function insertMicrosoft($conn, $title, $description, $video, $image, $price, $console ){
   $sql = "SELECT * FROM Microsoft WHERE title='".$title."';";
   $result = My_SQL_EXE($conn, $sql);
   $row = mysqli_fetch_row($result);
 
   if($row[1] <> $title){
-    $sql = "INSERT INTO Microsoft (title, description, video, image, price)
-    VALUES('" . $title . "','" . $description . "','" . $video . "','" . $image . "', '".$price."');";
+    $sql = "INSERT INTO Microsoft (title, description, video, image, price, console)
+    VALUES('" . $title . "','" . $description . "','" . $video . "','" . $image . "', '".$price."', '".$console."');";
     My_SQL_EXE($conn, $sql);
   }
   else{
@@ -121,14 +168,14 @@ function insertMicrosoft($conn, $title, $description, $video, $image, $price ){
 }
 
 // insert Nintendo
-function insertNintendo($conn, $title, $description, $video, $image, $price ){
+function insertNintendo($conn, $title, $description, $video, $image, $price, $console ){
   $sql = "SELECT * FROM Nintendo WHERE title='".$title."';";
   $result = My_SQL_EXE($conn, $sql);
   $row = mysqli_fetch_row($result);
 
   if($row[1] <> $title){
-    $sql = "INSERT INTO Nintendo (title, description, video, image, price)
-    VALUES('" . $title . "','" . $description . "','" . $video . "','" . $image . "', '".$price."');";
+    $sql = "INSERT INTO Nintendo (title, description, video, image, price, console)
+    VALUES('" . $title . "','" . $description . "','" . $video . "','" . $image . "', '".$price."', '".$console."');";
     My_SQL_EXE($conn, $sql);
   }
   else{
@@ -143,24 +190,27 @@ and !empty($_REQUEST['title'])
 and !empty($_REQUEST['description']) 
 and !empty($_REQUEST['video'])
 and !empty($_REQUEST['image'])
-and !empty($_REQUEST['price'])){
-  insertSony($conn, $title, $description, $video, $image, $price);
+and !empty($_REQUEST['price'])
+and !empty($_REQUEST['console'])){
+  insertSony($conn, $title, $description, $video, $image, $price, $console);
 }
 else if(isset($_POST['insertMicrosoft']) 
 and !empty($_REQUEST['title']) 
 and !empty($_REQUEST['description']) 
 and !empty($_REQUEST['video'])
 and !empty($_REQUEST['image'])
-and !empty($_REQUEST['price'])){
-  insertMicrosoft($conn, $title, $description, $video, $image, $price);
+and !empty($_REQUEST['price'])
+and !empty($_REQUEST['console'])){
+  insertMicrosoft($conn, $title, $description, $video, $image, $price, $console);
 }
 else if(isset($_POST['insertNintendo']) 
 and !empty($_REQUEST['title']) 
 and !empty($_REQUEST['description']) 
 and !empty($_REQUEST['video'])
 and !empty($_REQUEST['image'])
-and !empty($_REQUEST['price'])){
-  insertNintendo($conn, $title, $description, $video, $image, $price);
+and !empty($_REQUEST['price'])
+and !empty($_REQUEST['console'])){
+  insertNintendo($conn, $title, $description, $video, $image, $price, $console);
 }
 
 
@@ -181,8 +231,8 @@ function fetchSony($conn){
               echo "
                <td class='item-manager'>
                <div class='item-container'>
-                <div class='item-img'><img src=".$row[4]." width='250' height='300'></div>
-              
+               <a href='product-page.php?id=".$row[0]."&title=".$row[1]."&video=".$row[3]."&image=".$row[4]."&price=".$row[5]."&console=sony'><img class=img src=".$row[4]." width='180' height='230'></a></div>
+  
                </div> </td>";
           }
         echo "</tr></table></div>";
@@ -200,7 +250,7 @@ function fetchMicrosoft($conn){
                echo "
                 <td class='item-manager'>
                 <div class='item-container'>
-                 <div class='item-img'><img src=".$row[4]." width='250' height='300'></div>
+                <a href='product-page.php?id=".$row[0]."&title=".$row[1]."&video=".$row[3]."&image=".$row[4]."&price=".$row[5]."&console=microsoft'><img class=img src=".$row[4]." width='180' height='230'></a></div>
                 </div></td>";
            }
          echo "</tr></table></div>";
@@ -219,7 +269,7 @@ function fetchNintendo($conn){
                echo "
                 <td class='item-manager'>
                 <div class='item-container'>
-                 <div class='item-img'><img src=".$row[4]." width='250' height='300'></div>
+                <a href='product-page.php?id=".$row[0]."&title=".$row[1]."&video=".$row[3]."&image=".$row[4]."&price=".$row[5]."&console=nintendo'><img class=img src=".$row[4]." width='180' height='230'></a></div>
                 </div></td>";
            }
          echo "</tr></table></div>";
@@ -251,6 +301,7 @@ function fetchNintendo($conn){
   <input type="text" name="video" value="<?php $video;?>" placeholder="video">
   <input type="text" name="image" value="<?php $image;?>"  placeholder="image">
   <input type="text" name="price" value="<?php $price;?>"  placeholder="price">
+  <input type="text" name="console" value="<?php $console;?>"  placeholder="console">
   <button type="submit" name="insertSony">Insert Sony</button>
 </form>
 
@@ -271,6 +322,7 @@ function fetchNintendo($conn){
   <input type="text" name="video" value="<?php $video;?>" placeholder="video">
   <input type="text" name="image" value="<?php $image;?>"  placeholder="image">
   <input type="text" name="price" value="<?php $price;?>"  placeholder="price">
+  <input type="text" name="console" value="<?php $console;?>"  placeholder="console">
   <button type="submit" name="insertMicrosoft">Insert Microsoft</button>
 </form>
 
@@ -292,5 +344,6 @@ function fetchNintendo($conn){
   <input type="text" name="video" value="<?php $video;?>" placeholder="video">
   <input type="text" name="image" value="<?php $image;?>"  placeholder="image">
   <input type="text" name="price" value="<?php $price;?>"  placeholder="price">
+  <input type="text" name="console" value="<?php $console;?>"  placeholder="console">
   <button type="submit" name="insertNintendo">Insert Nintendo</button>
 </form>

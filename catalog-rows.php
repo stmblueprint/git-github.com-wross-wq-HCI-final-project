@@ -87,7 +87,7 @@
         position: absolute;
         z-index: 1;
         right: 0%;
-        translate: 20px 120px;
+        translate: 20px 60px;
        
     }
 
@@ -105,129 +105,28 @@
             require "scroll-indicator.php";
         ?>
     </div>
-<!-- <div class="row scrollbar-hidden">
-
-    <div class="item-containers">
-        <div class="promotion-img center" style="margin:10px ;">
-        item img
-    
-        </div>
-    </div>
-    <div class="item-containers">
-        <div class="promotion-img center" style="margin:10px ;">
-        item img
-    
-        </div>
-    </div>
-    <div class="item-containers">
-        <div class="promotion-img center" style="margin:10px ;">
-        item img
-    
-        </div>
-    </div>
-
-    <div class="item-containers">
-        <div class="promotion-img center" style="margin:10px ;">
-        item img
-    
-        </div>
-    </div>
-
-    <div class="item-containers">
-        <div class="promotion-img center" style="margin:10px ;">
-        item img
-    
-        </div>
-    </div>
-</div> -->
 <div class="sony-scrolling"><?php require_once "sony-view.php";?></div>
 </div>
 
 <!-- MICROSOFT -->
 <div style="margin: 30px; font-size: 20px;" class="center scrollbar-hidden">Microsoft</div>
 
+<div class="catalog-row-position">
     <div class="indicator-position">
         <?php 
             require "scroll-indicator.php";
         ?>
     </div>
-<div class="row scrollbar-hidden">
-
-    <div class="item-containers">
-        <div class="promotion-img center" style="margin:10px ;">
-        item img
-    
-        </div>
-    </div>
-    <div class="item-containers">
-        <div class="promotion-img center" style="margin:10px ;">
-        item img
-    
-        </div>
-    </div>
-    <div class="item-containers">
-        <div class="promotion-img center" style="margin:10px ;">
-        item img
-    
-        </div>
-    </div>
-
-    <div class="item-containers">
-        <div class="promotion-img center" style="margin:10px ;">
-        item img
-    
-        </div>
-    </div>
-
-    <div class="item-containers">
-        <div class="promotion-img center" style="margin:10px ;">
-        item img
-    
-        </div>
-    </div>
+<div class="sony-scrolling"><?php require_once "microsoft-view.php";?></div>
 </div>
 
 <!-- NINTENDO -->
 <div style="margin: 30px; font-size: 20px;" class="center">Nintendo</div>
-
-<div class="indicator-position">
+<div class="catalog-row-position">
+    <div class="indicator-position">
         <?php 
             require "scroll-indicator.php";
         ?>
-</div>
-<div class="row scrollbar-hidden">
-
-    <div class="item-containers">
-        <div class="promotion-img center" style="margin:10px ;">
-        item img
-    
-        </div>
     </div>
-    <div class="item-containers">
-        <div class="promotion-img center" style="margin:10px ;">
-        item img
-    
-        </div>
-    </div>
-    <div class="item-containers">
-        <div class="promotion-img center" style="margin:10px ;">
-        item img
-    
-        </div>
-    </div>
-
-    <div class="item-containers">
-        <div class="promotion-img center" style="margin:10px ;">
-        item img
-    
-        </div>
-    </div>
-
-    <div class="item-containers">
-        <div class="promotion-img center" style="margin:10px ;">
-        item img
-    
-        </div>
-    </div>
-</div>
+<div class="sony-scrolling"><?php require_once "nintendo-view.php";?></div>
 </div>
