@@ -2,9 +2,9 @@
 
 function My_Connect_DB(){
    
-   $servername = "";
-   $username = "";
-   $password = "";
+   $servername = "Is-14a9366c66a0941103ed5857cbf601ea696f6029.cqlc26jqy2u5.us-east-2.rds.amazonaws.com";
+   $username = "dbmasteruser";
+   $password = "g`}gh4Z{n_G(zC84ub8t_,~(tJNc:J2s";
    $dbname = "RetroGaming";
    
    $conn = mysqli_connect($servername, $username, $password, $dbname); //conection

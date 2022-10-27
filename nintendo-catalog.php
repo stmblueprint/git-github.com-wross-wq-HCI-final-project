@@ -35,17 +35,17 @@
 <div class="w3-center w3-container">
         <h3>GameBoy</h3>
         <div>
-            <?php require_once 'catalog-content/nintendo-console-pages/gameboy-content.php'; ?>
+            <?php require_once 'assets/catalog-content/nintendo-console-pages/gameboy-content.php'; ?>
         </div>
 
         <h3>Nintendo DS</h3>
         <div>
-            <?php require_once 'catalog-content/nintendo-console-pages/nintendo-64-content.php'; ?>
+            <?php require_once 'assets/catalog-content/nintendo-console-pages/nintendo-64-content.php'; ?>
         </div>
 
         <h3>Nintendo 64</h3>
         <div>
-            <?php require_once 'catalog-content/nintendo-console-pages/nintendo-ds-content.php'; ?>
+            <?php require_once 'assets/catalog-content/nintendo-console-pages/nintendo-ds-content.php'; ?>
         </div>
     </div>
 

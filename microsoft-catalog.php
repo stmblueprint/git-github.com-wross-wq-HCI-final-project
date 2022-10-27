@@ -34,20 +34,19 @@
 <div class="w3-center w3-container">
         <h3>Xbox</h3>
         <div>
-        <?php require_once 'catalog-content/microsoft-console-pages/xbox-content.php'; ?>
+        <?php require_once 'asstes/catalog-content/microsoft-console-pages/xbox-content.php'; ?>
         </div>
 
         <h3>Xbox 360</h3>
         <div>
-        <?php require_once 'catalog-content/microsoft-console-pages/xbox-360-content.php'; ?>
+        <?php require_once 'assets/catalog-content/microsoft-console-pages/xbox-360-content.php'; ?>
         </div>
 
         <h3>Xbox one</h3>
         <div>
-        <?php require_once 'catalog-content/microsoft-console-pages/xbox-one-content.php'; ?>
+        <?php require_once 'assets/catalog-content/microsoft-console-pages/xbox-one-content.php'; ?>
         </div>
     </div>
-
 
 
     <?php 
