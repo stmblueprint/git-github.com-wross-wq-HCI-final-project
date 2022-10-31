@@ -148,7 +148,11 @@
 
         if ($row[1] <> null and $row[3] <> null) {
             $_SESSION['username'] = $row[2];
+            $_SESSION['id'] = $row[0];
+
             echo "<div class='center' style='color: green;'>You logged in successfully!</div>";
+            echo "<script>window.top.location='loginsplash.php'</script>";
+
         } else {
             echo "<div class='center messages'>User credentials doesn't exist! Try again</div>";
         }
@@ -181,7 +185,6 @@
     if (isset($_POST['submit-login'])) {
         if (!empty($email) and !empty($password) and $emailMSG !== 'Invalid email format') {
             fetchUser($conn, $email, $password);
-               echo "<script>window.top.location='loginsplash.php'</script>";
 
         }
     }

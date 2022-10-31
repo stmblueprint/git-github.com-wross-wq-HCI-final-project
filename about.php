@@ -28,7 +28,7 @@
     require_once "navigation.php";
 
     // TEMPORARY NAVIGATION
-    require_once "temp-file-navigation.php";
+    // require_once "temp-file-navigation.php";
    
    ?>
 

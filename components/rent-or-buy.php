@@ -102,12 +102,28 @@ input:checked + .slider .off
         <div class="switch-border">
             <div class="switch-content">
                 <label class="switch">
-                 <input type="checkbox" id="togBtn" value="">
+                 <input type="checkbox" id="togBtn" onclick="switched(this)">
                     <div class="slider round">
-                        <span class="on">BUY</span>
+                        <span id="on" class="on">BUY</span>
                         <span class="off">RENT</span>
                     </div>
                 </label>
             </div>
         </div>
 </div>
+
+<script> 
+    var switchValues = { };
+    function switched (switchElement) {
+      switchValues[switchElement.id] = switchElement.checked;
+
+      if(document.getElementById('togBtn').checked === true){
+        document.getElementById('togBtn').checked === true
+        <?php $_SESSION['paymentType'] = "Buying";?>
+      }else{
+        document.getElementById('togBtn').checked = false;
+        <?php $_SESSION['paymentType'] = "Renting";?>
+      }
+
+    }
+</script>

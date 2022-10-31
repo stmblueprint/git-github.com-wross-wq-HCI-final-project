@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://www.paypal.com/sdk/js?client-id={clientID}&components=buttons"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id={}&components=buttons"></script>
     <title>Paypal Integration Test</title>
 </head>
 
@@ -33,9 +33,6 @@ paypal.Buttons({
         <input type="hidden" name="item_number" value="123456" />
         <button type="button" name="submit" value="Submit Payment"> </button>
     </form>
-
-    
-
 
 <?php
 //sending request

@@ -26,31 +26,62 @@
     require_once "navigation.php";
 
     // TEMPORARY NAVIGATION
-    require_once "temp-file-navigation.php";
+    // require_once "temp-file-navigation.php";
    
    ?>
 
-    <div class="w3-center w3-container">
-        <h3>Playstation 1</h3>
+<div class="w3-center w3-container">
+        <h3>Playstation</h3>
+        <!-- display Playstion 1  games -->
         <div>
-            <?php require_once 'assets/catalog-content/sony-console-pages/ps1-content.php'; ?>
+        <?php 
+        if($_GET['console'] === 'ps'){ 
+            echo "style='display: block;'";
+        ?> 
+            class="catalog-row-position">
+            <div class="indicator-position">
+                <?php 
+                    require "scroll-indicator.php";
+                ?>
+          </div>
+        <div class="sony-scrolling"><?php require_once "ps-view.php";?></div>
         </div>
 
         <h3>Playstation 2</h3>
+        <!-- display  Playstion 2 games -->
         <div>
-            <?php require_once 'assets/catalog-content/sony-console-pages/ps2-content.php'; ?>
-        </div>
-
-        <h3>Playstation 3</h3>
-        <div>
-            <?php require_once 'assets/catalog-content/sony-console-pages/ps3-content.php'; ?>
-        </div>
-
+        <?php } else if($_GET['console'] === 'ps2'){ 
+         echo "style='display: block;'"; ?>
+         class="catalog-row-position">
+          <div class="indicator-position">
+              <?php 
+                  require "scroll-indicator.php";
+              ?>
+          </div>
+      <div class="sony-scrolling"><?php require_once "ps2-view.php";?></div>
+      </div>
     </div>
-    <footer>
-        <div style="padding-top: 100px;">
-            <?php require_once 'footer.php'; ?>
+
+        <<h3>Playstation 3</h3>
+        <!-- display  Playstion 3 games -->
+        <div>
+        <?php } else if($_GET['console'] === 'ps3'){ 
+         echo "style='display: block;'"; ?>
+         class="catalog-row-position">
+          <div class="indicator-position">
+              <?php 
+                  require "scroll-indicator.php";
+              ?>
+          </div>
+      <div class="sony-scrolling"><?php require_once "ps3-view.php";?></div>
+      <?php }    
+        ?>
         </div>
-    </footer>
+    </div>
+
+    <?php 
+    // FOOTER
+     require_once "footer.php"
+    ?>
 </body>
 </html>

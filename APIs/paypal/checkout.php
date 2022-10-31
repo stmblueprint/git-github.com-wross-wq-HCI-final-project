@@ -10,8 +10,7 @@
     <!-- TEMPORARY TEST AMOUNT -->
     <?php $amount = 49.99; ?>
 
-    <!-- <script src="https://www.paypal.com/sdk/js?client-id=AaczlnqfZSZ82MiiV6ZxPSXTemBTcPw2wALkHxhnbPcS6TuZP1SmdpcimsGNyLSmbT_VPDRFfQHd-qRS&currency=USD&intent=capture&enable-funding=venmo" data_source="integrationbuilder"></script> -->
-    <script src="https://www.paypal.com/sdk/js?client-id={clientID}" data_source="integrationbuilder"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id={}" data_source="integrationbuilder"></script>
     <script>
         const paypalButtonsComponent = paypal.Buttons({
             // optional styling for buttons

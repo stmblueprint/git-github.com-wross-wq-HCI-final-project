@@ -207,6 +207,9 @@
                 VALUES('" . $email . "','" . $username . "','" . $password . "');";
                 $result = My_SQL_EXE($conn, $sql);
                 $_SESSION['username'] = $username;
+
+               
+                $_SESSION['id'] = $row[0];
                 // echo "<div class=center style='color:green; font-size:20px;'>Success! <a href='login.php' style='font-weight: bold;'>&nbsp;&nbsp; Log in</a></div>";
             } else {
                 echo "<div class=center style='color:red; font-size:20px;'>User already exists! <a href='login.php' style='font-weight: bold;'>&nbsp;&nbsp; Log in</a></div>";

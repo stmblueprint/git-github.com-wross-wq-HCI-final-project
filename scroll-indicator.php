@@ -27,7 +27,7 @@
     }
 
     .nav-arrow{
-        filter: brightness(1.1)
+        filter: brightness(1.6);
     }
 </style>
 

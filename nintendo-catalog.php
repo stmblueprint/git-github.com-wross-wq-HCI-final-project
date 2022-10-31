@@ -27,35 +27,44 @@
     require_once "navigation.php";
 
     // TEMPORARY NAVIGATION
-    require_once "temp-file-navigation.php";
+    // require_once "temp-file-navigation.php";
    
    ?>
 
 
 <div class="w3-center w3-container">
-        <h3>GameBoy</h3>
-        <div>
-            <?php require_once 'assets/catalog-content/nintendo-console-pages/gameboy-content.php'; ?>
-        </div>
-
-        <h3>Nintendo DS</h3>
-        <div>
-            <?php require_once 'assets/catalog-content/nintendo-console-pages/nintendo-64-content.php'; ?>
-        </div>
-
+        
         <h3>Nintendo 64</h3>
+        <!-- display Nintendo 64 games -->
         <div>
-            <?php require_once 'assets/catalog-content/nintendo-console-pages/nintendo-ds-content.php'; ?>
-        </div>
+        <?php if($_GET['console'] === 'n64'){ 
+         echo "style='display: block;'"; ?>
+         class="catalog-row-position">
+          <div class="indicator-position">
+              <?php 
+                  require "scroll-indicator.php";
+              ?>
+          </div>
+      <div class="sony-scrolling"><?php require_once "nintendo-64-view.php";?></div>
+      </div>
     </div>
 
-
-
-
-
-
-
-
+        <<h3>Nintendo DS</h3>
+        <!-- display Nintendo DS games -->
+        <div>
+        <?php } else if($_GET['console'] === 'ds'){ 
+         echo "style='display: block;'"; ?>
+         class="catalog-row-position">
+          <div class="indicator-position">
+              <?php 
+                  require "scroll-indicator.php";
+              ?>
+          </div>
+      <div class="sony-scrolling"><?php require_once "nintendo-ds-view.php";?></div>
+      <?php }    
+        ?>
+        </div>
+    </div>
 
     <?php 
     // FOOTER
