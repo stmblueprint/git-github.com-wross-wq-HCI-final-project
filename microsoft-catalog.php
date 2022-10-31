@@ -33,21 +33,38 @@
 
 <div class="w3-center w3-container">
         <h3>Xbox</h3>
+        <!-- display xbox games -->
         <div>
-        <?php require_once 'asstes/catalog-content/microsoft-console-pages/xbox-content.php'; ?>
+        <?php 
+        if($_GET['console'] === 'xbox'){ 
+            echo "style='display: block;'";
+        ?> 
+            class="catalog-row-position">
+            <div class="indicator-position">
+                <?php 
+                    require "scroll-indicator.php";
+                ?>
+          </div>
+        <div class="sony-scrolling"><?php require_once "xbox-view.php";?></div>
         </div>
 
         <h3>Xbox 360</h3>
+        <!-- display xbox 360 games -->
         <div>
-        <?php require_once 'assets/catalog-content/microsoft-console-pages/xbox-360-content.php'; ?>
-        </div>
+        <?php } else if($_GET['console'] === 'xbox 360'){ 
+         echo "style='display: block;'"; ?>
+         class="catalog-row-position">
+          <div class="indicator-position">
+              <?php 
+                  require "scroll-indicator.php";
+              ?>
+          </div>
+      <div class="sony-scrolling"><?php require_once "xbox-360-view.php";?></div>
 
-        <h3>Xbox one</h3>
-        <div>
-        <?php require_once 'assets/catalog-content/microsoft-console-pages/xbox-one-content.php'; ?>
+      <?php }    
+    ?>
         </div>
     </div>
-
 
     <?php 
     // FOOTER

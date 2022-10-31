@@ -2,10 +2,10 @@
 
 function My_Connect_DB(){
    
-   $servername = "";
-   $username = "";
-   $password = "";
-   $dbname = "RetroGaming";
+    $servername = "";
+    $username = "";
+    $password = ""; 
+    $dbname = "RetroGaming";
    
    $conn = mysqli_connect($servername, $username, $password, $dbname); //conection
    if(!$conn)
