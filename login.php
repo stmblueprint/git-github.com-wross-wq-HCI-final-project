@@ -117,6 +117,7 @@
 
     // checks input formats
     if (isset($_REQUEST['submit-login'])) {
+
         $email = validate_input($_REQUEST['email-login']);
         $password = validate_input($_REQUEST['password-login']);
         if (empty($password)) $passwordMSG = "password is required";
@@ -203,6 +204,7 @@
                         <!-- email -->
                         <label for="email-login">Email <?php asterisk(); ?></label><br />
                         <input type="text" name="email-login" value="<?php echo $email; ?>" placeholder="Email"><br /><br />
+
                         <!-- password -->
                         <label for="password-login">Password <?php asterisk(); ?></label><br />
                         <input type="password" name="password-login" value="<?php echo $password; ?>" placeholder="Password"><br /><br />
