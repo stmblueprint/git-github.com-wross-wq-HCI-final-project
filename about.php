@@ -32,17 +32,15 @@
    
    ?>
 
+    <div class="w3-container center">
+        <h1>About Us</h1>
+    </div>
 
-
-
-
-
-
-
-
-
-
-
+    <div class="w3-container center">
+    <p>Our mission is to provide options for gamers who are feeling nostalgic and whant to revisit 
+        there past by playing the video games that helped shape them as kids. With good prices, options to rent or buy,
+        and seemless browsing. Take a look! We're sure you wont be disapointed!</p>
+    </div>
 
     <?php 
     // FOOTER
